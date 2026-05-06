@@ -1,0 +1,86 @@
+/* =============================================
+   COMPONENTS
+   ============================================= */
+
+/* NAVBAR */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10, 10, 26, 0.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); height: 65px;
+}
+.nav-container { display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto; padding: 0 20px; height: 100%; }
+.nav-logo { display: flex; align-items: center; gap: 8px; font-family: 'Poppins', sans-serif; font-size: 1.4rem; font-weight: 800; color: white; }
+.logo-icon { font-size: 1.6rem; }
+.logo-text { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.nav-links { display: flex; gap: 4px; }
+.nav-link { padding: 8px 16px; border-radius: var(--radius-sm); color: var(--text-secondary); font-weight: 500; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+.nav-link:hover, .nav-link.active { color: white; background: var(--accent-light); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-user { position: relative; display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 6px 12px; border-radius: var(--radius-sm); transition: var(--transition); }
+.nav-user:hover { background: var(--bg-hover); }
+.nav-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); }
+.nav-username { font-weight: 600; font-size: 0.9rem; }
+.nav-dropdown { position: absolute; top: 100%; right: 0; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-sm); min-width: 200px; box-shadow: var(--shadow); overflow: hidden; margin-top: 8px; }
+.dropdown-item { display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: var(--text-secondary); transition: var(--transition); width: 100%; border: none; background: none; cursor: pointer; font-size: 0.9rem; }
+.dropdown-item:hover { background: var(--bg-hover); color: white; }
+.admin-link { color: var(--gold) !important; }
+.logout-btn { color: var(--accent) !important; border-top: 1px solid var(--border); }
+.nav-auth { display: flex; gap: 8px; }
+.mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.3rem; cursor: pointer; }
+
+/* CONTENT CARD */
+.content-card {
+  background: var(--bg-secondary); border-radius: var(--radius); overflow: hidden;
+  cursor: pointer; transition: var(--transition); border: 1px solid var(--border);
+}
+.content-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.card-image { position: relative; overflow: hidden; aspect-ratio: 2/3; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.content-card:hover .card-image img { transform: scale(1.05); }
+.early-access-badge { position: absolute; top: 10px; right: 10px; background: var(--gradient-gold); color: #000; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
+.card-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent); }
+.card-type { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.8); }
+.card-body { padding: 14px; }
+.card-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.card-meta { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; }
+.card-genre { font-size: 0.75rem; color: var(--accent); }
+
+/* REVIEW CARD */
+.review-card {
+  background: var(--bg-secondary); border-radius: var(--radius); padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border); transition: var(--transition);
+}
+.review-card:hover { border-color: var(--accent-light); }
+.review-card.early-access { border-left: 4px solid var(--gold); }
+.review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.review-user { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.review-username { font-weight: 600; }
+.first-look-tag { display: block; font-size: 0.75rem; color: var(--gold); font-weight: 600; }
+.review-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+.review-body { color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; }
+.spoiler-warning { background: rgba(220, 53, 69, 0.1); padding: 16px; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 8px; color: var(--danger); }
+.review-footer { display: flex; align-items: center; gap: 16px; }
+.like-btn { background: none; border: none; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; gap: 4px; transition: var(--transition); }
+.like-btn.liked { color: var(--accent); }
+.review-date { color: var(--text-muted); font-size: 0.8rem; }
+.points-earned { background: var(--accent-light); color: var(--accent); padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+
+/* LOADER */
+.loader-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: var(--bg-primary); }
+.loader { text-align: center; }
+.loader-ring {
+  width: 50px; height: 50px; border: 3px solid var(--border); border-top-color: var(--accent);
+  border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 12px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loader-text { color: var(--accent); font-weight: 700; font-family: 'Poppins', sans-serif; letter-spacing: 3px; }
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 768px) {
+  .nav-links { display: none; position: absolute; top: 65px; left: 0; right: 0; background: var(--bg-secondary); flex-direction: column; padding: 16px; border-bottom: 1px solid var(--border); }
+  .nav-links.active { display: flex; }
+  .nav-username { display: none; }
+  .mobile-toggle { display: block; }
+}

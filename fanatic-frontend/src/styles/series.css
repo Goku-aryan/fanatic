@@ -1,0 +1,23 @@
+/* =============================================
+   SERIES PAGE - Vibrant, Binge-worthy Vibe
+   ============================================= */
+.series-page { animation: fadeIn 0.5s ease; }
+
+.series-hero {
+  position: relative; padding: 60px 30px; text-align: center; margin-bottom: 30px;
+  background: linear-gradient(135deg, #0a1628, #0f3460 40%, #00b4d8 150%);
+  border-radius: var(--radius); overflow: hidden;
+}
+.series-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200') center/cover;
+  opacity: 0.12;
+}
+.series-hero-content { position: relative; z-index: 1; }
+.series-hero h1 { font-family: 'Poppins', sans-serif; font-size: 3rem; }
+.series-hero p { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+
+.series-grid .content-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 12px 40px rgba(0, 180, 216, 0.3); }
+.series-card { border: 1px solid transparent; }
+.series-card:hover { border-color: #00b4d8; }
+.series-card .card-overlay { background: linear-gradient(0deg, rgba(0, 180, 216, 0.8), transparent); }

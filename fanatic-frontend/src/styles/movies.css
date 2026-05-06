@@ -1,0 +1,26 @@
+/* =============================================
+   MOVIES PAGE - Dark, Cinematic, Catchy
+   ============================================= */
+.movies-page { animation: fadeIn 0.5s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.movies-hero {
+  position: relative; padding: 60px 30px; text-align: center; margin-bottom: 30px;
+  background: linear-gradient(135deg, #0a0a1a, #1a0a20 40%, #e94560 150%);
+  border-radius: var(--radius); overflow: hidden;
+}
+.movies-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200') center/cover;
+  opacity: 0.15;
+}
+.movies-hero-content { position: relative; z-index: 1; }
+.movies-hero h1 { font-family: 'Poppins', sans-serif; font-size: 3rem; }
+.movies-hero p { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+
+.movies-grid .content-card { transition: var(--transition); }
+.movies-grid .content-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 12px 40px rgba(233, 69, 96, 0.3); }
+
+.movie-card { border: 1px solid transparent; }
+.movie-card:hover { border-color: var(--accent); }
+.movie-card .card-overlay { background: linear-gradient(0deg, rgba(233, 69, 96, 0.8), transparent); }

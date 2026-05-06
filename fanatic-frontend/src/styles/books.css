@@ -1,0 +1,57 @@
+/* =============================================
+   BOOKS PAGE - Light, Calm, Easy on Eyes
+   ============================================= */
+.books-page {
+  animation: fadeIn 0.5s ease;
+  background: #faf8f5;
+  color: #2d2d2d;
+  min-height: 100vh;
+  margin: -20px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.books-hero {
+  padding: 60px 30px; text-align: center; margin-bottom: 30px;
+  background: linear-gradient(135deg, #f5f0e8, #e8dcc8 50%, #d4c5a9);
+  border-radius: var(--radius);
+}
+.books-hero h1 { font-family: 'Poppins', sans-serif; font-size: 3rem; color: #3d2c1e; }
+.books-hero p { color: #6b5b4e; font-size: 1.1rem; }
+
+/* Light controls */
+.books-controls .search-bar.books-search {
+  background: #fff; border: 1px solid #d4c5a9;
+}
+.books-controls .search-bar.books-search input { color: #2d2d2d; }
+.books-controls .search-bar.books-search .search-icon { color: #8d7b6e; }
+.btn-book { background: #8d6e63; color: white; }
+.btn-book:hover { background: #6d4c41; }
+
+.books-filters .book-tab {
+  background: #fff; color: #6b5b4e; border: 1px solid #d4c5a9;
+}
+.books-filters .book-tab.active { background: #8d6e63; color: white; border-color: #8d6e63; }
+
+/* Book cards */
+.books-grid .content-card {
+  background: #fff; border: 1px solid #e8dcc8; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.books-grid .content-card:hover {
+  transform: translateY(-6px); box-shadow: 0 8px 25px rgba(141, 110, 99, 0.2); border-color: #8d6e63;
+}
+.books-grid .card-body { color: #2d2d2d; }
+.books-grid .card-body .card-title { color: #3d2c1e; }
+.books-grid .card-body .card-meta { color: #6b5b4e; }
+.books-grid .card-body .card-genre { color: #8d6e63; }
+
+.book-card .card-overlay { background: linear-gradient(0deg, rgba(141, 110, 99, 0.8), transparent); }
+
+.books-loader { color: #6b5b4e; }
+.books-empty h3 { color: #3d2c1e; }
+.books-empty p { color: #6b5b4e; }
+
+/* Override dark pagination for books */
+.books-page .pagination .btn-outline { background: #fff; color: #8d6e63; border-color: #d4c5a9; }
+.books-page .pagination .btn-outline:hover { background: #8d6e63; color: white; }
+.books-page .page-info { color: #6b5b4e; }
