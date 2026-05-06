@@ -21,11 +21,9 @@ public class JwtTokenProvider {
     private final long refreshExpiration;
 
     public JwtTokenProvider(
-            @Value("${app.jwt.secret}") String jwtSecret,
-            @Value("${app.jwt.expiration}") long jwtExpiration,
-            @Value("${app.jwt.refresh-expiration}") long refreshExpiration) {
-
-        log.info("JWT Secret Length: {}", jwtSecret.length());
+            @Value("${app.jwt.secret:${JWT_SECRET:myUltraSecretKeyForFanaticApplicationThatMustBeAtLeast64CharactersLongForSecurity2024Fanatic}}") String jwtSecret,
+            @Value("${app.jwt.expiration:86400000}") long jwtExpiration,
+            @Value("${app.jwt.refresh-expiration:604800000}") long refreshExpiration) {
 
         this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
         this.jwtExpiration = jwtExpiration;
