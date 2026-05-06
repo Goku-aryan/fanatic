@@ -25,6 +25,8 @@ public class JwtTokenProvider {
             @Value("${app.jwt.expiration}") long jwtExpiration,
             @Value("${app.jwt.refresh-expiration}") long refreshExpiration) {
 
+        log.info("JWT Secret Length: {}", jwtSecret.length());
+
         this.key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
         this.jwtExpiration = jwtExpiration;
         this.refreshExpiration = refreshExpiration;
