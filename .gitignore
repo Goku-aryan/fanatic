@@ -11,10 +11,6 @@ out/
 # Environment files
 .env
 .env.*
-application.properties
-application.yml
-**/application.properties
-**/application.yml
 
 # Logs
 *.log
