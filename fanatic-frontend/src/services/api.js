@@ -1,6 +1,9 @@
 import axios from 'axios'
 
-const API_BASE_URL = 'http://localhost:8080/api'
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://fanatic-backend.onrender.com/api"
+
+console.log("API URL:", API_BASE_URL)
 
 const api = axios.create({
   baseURL: API_BASE_URL,
